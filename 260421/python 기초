@@ -1,0 +1,16 @@
+#1. True, False 대문자
+#is_student = True
+#is_food = False
+#print(is_student)
+
+#2. input은 무조건 문자열 int로 타입 변환 필요 
+#num = input("정수입력 : ")
+#num = int(num)
+#print(num + 10)
+
+#Q. 너비와 높이를 입력 받아 사각형의 s넓이를 출력하시오
+width = int (input("정수입력 : "))
+height = int (input("정수입력 : "))
+#3. input은 무조건 문자열이라 숫자의 경우 str() 형변환 필요
+#4. input를 숫자로 사용할 경우, 앞에 int() 또는 float() 형변환 필요
+print("넓이 : " + str(width*height))
