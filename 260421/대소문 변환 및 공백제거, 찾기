@@ -1,0 +1,18 @@
+# 대소문자 변환
+word = "i ilke banana"
+print(word.upper())   # 대문자
+print(word.lower())   # 소문자
+print(word.title())   # 각 단어의 첫 글자만 대문자
+
+
+#공백 제거 : 개발 필수 요소 (공백으로 인해 오류나면 골치 아픔)
+word = " banana "
+print(word)           # 공백 제거 X
+print(word.strip())   # 양쪽 공백 제거
+print(word.lstrip())  # 왼쪽 공백 제거
+print(word.rstrip())  # 오른쪽 공백 제거
+
+#찾기
+word = "찬용이는 진섭이보다 지금이 좋다고 한다"
+print(word.find("찬용")) #있다면 위치 반환(인덱스) 없으면 -1
+print(word.index("동렬")) #인덱스 반환, 없으면 에러
