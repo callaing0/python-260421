@@ -43,3 +43,62 @@ print(not num)
 
 ================= 반 복 문 =================
 
+# 반복문
+#num = 10
+
+# : 는 조건식의 끝이라는 뜻이라 필수
+# 라인에 맞춰서 실행할 코드를 작성
+#if num > 5 : 
+#    print("크다")
+#    print("10이 크다")
+#elif num < 5: #else if
+#    print("작다")
+#    print("5보다 작다")
+
+#Q. 변수 apple의 값이 10 이상이라면 1봉지 8000원이라고 출력하고
+#   apple의 값이 10 미만이라면 개당 2000원이라고 출력
+
+#apple = int(input("갯수를 입력해주세요 : "))
+
+#if apple >= 10:
+#    print("1봉지에 8천원")
+#else:
+#    print("개당 4천원")
+
+#res = 2
+#match res:
+#    case 1 | 4:
+#        print("숫자 1 또는 4이다")
+#    case 2:
+#        print("숫자 2이다")
+#    case int():
+#        print("정수이다")
+
+#Q. like 변수 값이 100 이상이면 spot 등록 출력
+#좋아요 변수의 값이 10 이하라면 관심 spot 출력
+
+#like = int(input("좋아요 숫자 : "))
+
+#if like >= 100:
+#    print("spot 등록")
+#elif like <= 10:
+#    print("관심 spot")
+
+#Q. 아이디와 비밀번호를 입력받아 일치하면 로그인 성공, 불일치하면 아이디 또는 비밀번호가 잘못되었습니다 송출
+#   아이디는 진섭, 비밀번호는 babo.
+
+#id = "진섭"
+#password = "babo"
+
+#id1 = input("아이디를 입력하세요 : ")
+#password1 = input("비밀번호를 입력하세요: ")
+
+#if id == id1 and password == password1:
+#    print("로그인 성공")
+#else:
+#    print("아이디 또는 비밀번호가 잘못되었습니다")
+
+================= 문자열 여부 =================
+
+#파이썬에서 문자열 포함 여부 확인하는 방법
+
