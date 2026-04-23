@@ -1,29 +1,64 @@
-#Q. 5명의 이름이 저장되어있는 리스트 만들기
-#5명의 이름을 출력하는 반복문 만들기
-users = ["강하나", "강둘", "강셋", "강넷", "강다섯"]
 
-for user in users:
-    print(user)
+# 문제1.  5명의 이름이 저장되어 있는 리스트 만들기
+#   5명의 이름  출력하는 반복문 만들기
 
+names = ["이순신","강감찬","이성계","문익점","한석봉"]
+print( type(names))
+for name in names:
+    print(name)
 
-#Q. 정도전의 이름을 추가하고 출력하세요
-users.append("정도전")
-print(users)
+# 문제2.  정도전  이름을 추가하고 출력하세요 
+names.append("정도전") # 원하는 위치 추가는 insert
+print( names )
 
-#Q. 구매할 과일을 입력하면 총 지불 금액이 얼마안지 출력
-#   단, 과일은 여러개 구매 가능
+# 문제 3.  리스트에  김유신 이 있는지 확인하는 코드 작성하기 
+if "김유신" in names:
+    print("등록된 이름이다")
+else:
+    print("등록되지 않은 이름이다.")
 
-fruits = ["딸기", "배", "사과", "오렌지", "파인애플", "포도"]
-fruits.sort()
-price = [5000, 8000, 12000, 9500, 15500, 20400]
+#문제 4.  이름 리스트에  내림차순으로 정렬 하여 출력하세요
+names.sort(reverse=True)
+print( names )
 
-total = 0
+# 문제 5.   과일의 이름이 두글자인 과일만 출력하세요
+# 힌트 : len
+fruits = ["사과","바나나","파인애플","딸기","오렌지","포도","배"] 
 
-fruit = input("구매할 과일 입력: ").split()
+for f in fruits:
+    if len(f)==2:
+        print(f)
 
-for f in fruit:
-    if f in fruits:
-        idx = fruits.index(f)
-        total += price[idx]
+fruits.sort(key=len)
+print(fruits)
 
-print("총 금액 :", total)
+#문제  6. 과일 검색 프로그램 만들기
+#  과일이름 키보드를 통해 입력받는다.
+#  입력한 과일이  리스트에 있다면  판매중,  없다면 품절 이라고 출력
+
+# fname = input("과일 입력 : ").strip()
+# if fname in fruits:
+#     print("판매중")
+# else:
+#     print("품절")
+# for fruit in fruits:
+#     if fname == fruit:
+#         print("판매중")
+#     else:
+#         print("품절")
+
+# 문제 7.   구매 할 과일 을 입력 하면  총 지불금액 얼마인지 출력
+#  단, 과일은 1개를 구매할수도 있고 여러개 구매할수도 있어야 한다.
+
+# fruits.sort() # 딸기, 바나나,배,사과,오렌지,파이애플,포도
+# price = [5000, 8000, 12000,9500, 15500, 20400, 9000]
+
+# fname = input("구매할 과일 입력 : ").split()
+
+# total = 0
+
+# for f in fname:
+#     if f in fruits:
+#         idx = fruits.index(f)
+#         total += price[idx]
+# print("총 금액 : ", total)
