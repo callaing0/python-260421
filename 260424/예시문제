@@ -1,0 +1,37 @@
+#문제 1.  딕셔너리를 만드세요
+
+snackName = ["새우깡","칙촉", "마가렛", "짱구", "포카칩", "초코하임"]
+price = [ 2000, 3200,  4500,  3000, 2800, 4200 ]
+
+snack = dict()
+for i, k in enumerate(snackName):
+    snack[k] = price[i]
+
+print( snack )
+
+snack2 = { k:price[i] for i,k in enumerate(snackName) }
+print( snack2 )
+
+
+# 문제 2.  딕셔너리를 만들고  다음 조건으로 조회 하세요
+
+item = ["선풍기","냉장고","에어컨","Tv", "컴퓨터","노트북","청소기"]
+brand = ["LG","삼성","LG","삼성","HP","DELL","다이슨"]
+price = [80000,  1250000, 850000, 1540900, 2300000, 1570000, 534000]
+
+# item, brand, price의 각 인덱스 매칭이다.  
+#  선풍기는 LG이고 금액은 80000원이다. 
+# 딕셔너리의 키는 제품명  value는  브랜드와 금액 
+# 삼성 브랜드의 제품명과 금액을 출력하세요 
+
+product = dict()
+for i, k in enumerate(item):
+    product[k] = {"brand":brand[i] , "price":price[i]}
+
+product = { k:{"brand":brand[i] , "price":price[i]} 
+           for i, k in enumerate(item) }
+print( product )
+
+for k , v in product.items():
+    if v["brand"] == "삼성":
+        print(k , v["price"])
