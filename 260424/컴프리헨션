@@ -1,0 +1,52 @@
+# 컴프리헨션
+#  [ 표현식  for  변수 in 반복대상 ]
+
+nums2 = [ i * 2 for i in range(1,5) ]
+print(nums2)
+
+# 1~ 15 까지 숫자중에서  3의 배수만 리스트에 저장하겠다.
+
+nums3 = [ i for i in range(1, 16) if i%3 == 0  ]
+print( nums3 )
+
+cost = [ 4500, 6700, 3100, 5800, 2700, 4900 ]
+# cost 리스트에는 상품의 가격이 저장 되어 있다. 
+# 5000원 이하는 저가형 ,  5000원 초과는 고가형 상품 이라고  저장하시오
+# if~else 를 표현식에 쓰는경우
+# [ 저장값 if  조건식  else 저장값  for 변수 in 반복대상 ]
+
+result = [ "저가형" if p<=5000 else "고가형"  for p in cost  ]
+
+print( result )
+
+# 학생 성적 관리 프로그램 만들기 ,  과목  국어, 수학, 영어
+std1 = [ 89, 56, 73 ]
+std2 = [ 45, 87, 35 ]
+std3 = [ 81, 85, 94 ]
+std4 = [ 90, 34, 61 ]
+std5 = [ 59, 63, 70 ]
+stdName = ["이순신", "임꺽정", "한석봉", "정약용", "김춘추"]
+
+std = std1,std2,std3,std4,std5
+print(std)
+score = dict()
+# 과목명  튜플
+subject = ("국어", "수학", "영어")
+
+for i, name in enumerate(stdName):
+    temp = dict()
+    for k, s in enumerate(std[i]):
+        temp[subject[k]] = s 
+    score[name] = temp
+
+#  한석봉 학생의 성적을 출력하시오 
+print( score["한석봉"] ) 
+for k , v in score["한석봉"].items():
+    print(k,v)
+
+print( score )
+
+# {
+#     "이순신": {"국어":89 , "수학":56, "영어":73 } ,
+#     "임꺽정"
+# }
