@@ -1,0 +1,89 @@
+#dataType2.py
+
+# 딕셔너리
+# 딕셔너리는  데이터를 키와 value 로 저장하는 자료형 이다. 
+
+info = { "name" : "이순신" }
+print( info["name"] )
+
+m = [ "이순신", 34, "군인" ]
+
+print( m[0]  ) 
+print( m[1]  )
+#  m[0] ->  이름인지,  나이인지,  직업인지  알수 가 없다.  
+
+info = { "name" : "이순신" , "age":20 , "job":"군인" , "name":"김유신" }
+print( info["name"] )
+
+#  딕셔너리는  언제사용하냐??   
+#   로그인 회원이나, 상품정보, 단일게시글 정보,  설정값 
+#  JSON데이터, API응답데이터용
+
+mem = dict()
+
+print(  info.get("city")  )
+
+info["city"] = "대전"   #  딕셔너리에 키와 값 추가
+
+print( info )
+
+city  =  info.pop("city") # 딕셔너리 삭제
+print( city ) 
+print( info )
+del info["age"]
+
+if "city" in info:   # 딕셔너리에서  키 존재 여부 확인 
+    print("도시 정보 있다")
+
+if "김유신" in info.values():# 딕셔너리에서 valye 가져오기
+    print("김유신있다.")
+
+k , v = info.items()  # 딕셔너리에서 키와 valye 가져오기
+info.keys()  # 딕셔너리에서  키만 가져오기
+
+print( type(k), type(v) )
+print( k, v)
+
+# 딕셔너리에  key로 사용가능한것  
+#  문자열 , 정수, 실수 , 튜플
+
+info = {
+    "id" : 1004,
+    "email" : "hahaha@naver.com",
+    "name" : "이순신",
+    "birth" : "20010424",
+    "address" : "대전 광역시 중구 선화동 방산빌딩 2층 203호"
+}
+
+# 이름이 이순신이냐?
+if "name" in info:
+    if info["name"] == "이순신":
+        print("이순신 이다.")
+    else:
+        print("이순신이  아니다")
+else:
+    print("이름 정보가 없습니다.")
+
+#  이메일의  도메인은 무엇인가? 
+
+if "email" in info:
+    email = info["email"]  # 딕셔너리에서 email키의 값 가져오기
+    domain = email[ email.index("@")+1 :]
+    print( domain)
+    # domain = email.split("@")[1]
+    # print(domain)
+
+#  주소가 잘못 저장 되었다.  선화동 아니고  대흥동이다  수정하시오
+if "address" in info:
+    addr = info["address"]
+    addr = addr.replace("선화동","대흥동")
+    print(addr)
+    info["address"] = addr
+
+print( info )
+
+
+nums = [] 
+for i in range(1,5):
+    nums.append(  i * 2 )
+print( nums )
