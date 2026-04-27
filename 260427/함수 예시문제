@@ -1,0 +1,94 @@
+
+#문제1. 간단한 함수 만들기
+#사각형의 너비와 높이를 받아서 넓이를 출력하는 함수 호출
+#함수 내부에 넓이 구하는 계산식과 출력이 있어야함
+
+# 사각형 넓이 계산
+#def sum_area(h, w):
+#    area = h * w
+#    print(f"사각형의 넓이는 {area}입니다.")
+
+# 높이와 너비 입력
+#h = int(input("높이를 입력하시오: "))
+#w = int(input("너비를 입력하시오: "))
+
+# 호출
+#sum_area(h, w)
+
+#=====================================================
+
+#문제2. 아래의 코드를 보고 함수를 만드세요
+#로그인 체크 함수 만들기
+
+#문제 코드
+#if id=="admin" and pw == "1234": #여기 부분을 함수처리
+#    print("로그인에 성공하였습니다")
+#else:
+#    print("ID 또는 Password를 잘못 입력하셨습니다")
+
+#풀이 코드
+def login(id, pw):
+    if id=="admin" and pw == "1234": 
+        return True
+    else:
+        return False
+    
+id = input("ID를 입력하세요 : ")
+pw = input("Password를 입력하세요: ")
+
+    
+if login(id, pw):
+    print("로그인에 성공하였습니다")
+else:
+    print("ID 또는 Password를 잘못 입력하셨습니다")
+    
+login(id, pw)
+
+#=====================================================
+
+#문제3. 상품의 재고를 확인하여 재고 충분, 재고 부족, 재고 없음 출력 가능한 함수 만들기
+#재고 부족 기준은 재고량이 8개 이하인 경우
+
+item_stock = 12
+
+if item_stock > 8:
+    print("재고 충분")
+elif item_stock <= 8:
+    print("재고 부족")
+else:
+    print("재고 없음")
+
+#위 코드를 print(함수 호출) 형식으로 실행이 가능하게 함수를 만드시오
+
+def stock(item_stock):
+    if item_stock > 8:
+        return "재고 충분"
+    elif item_stock > 0:
+        return "재고 부족"
+    else:
+        return "재고 없음"
+
+item_stock = 12
+
+print(stock(item_stock))
+
+#문제4. 회원가입을 위한 아이디 중복체크 함수를 만드세요
+
+id_list = ["kim", "lee", "boo", "sin"]
+
+#id_list는 현재 가입된 회원들의 아이디가 저장되어있는 리스트
+#아이디 중복체크 함수를 통해 사용가능, 불가능을 출력
+
+def id_chcek(id):
+    if id in id_list:
+        return "중복된 아이디입니다."
+    else:
+        return "사용 가능한 아이디입니다."
+    
+id_list = ["kim", "lee", "boo", "sin"]
+
+id = input("ID를 입력하세요 : ")
+
+id_chcek(id_chcek(id))
+
+
