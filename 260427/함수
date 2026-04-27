@@ -38,6 +38,54 @@ dataInput(1, 20, 30)
 #- 해당 기능을 작동시키기 위해서는 어떤 것이 필요한지
 #- 필요한 것들은 외부에서 만들 수 있는 것인지 내부에서 받아와야하는지
 
+#==========================================
+
+#5. 함수의 반환값
+#return은 함수가 호출된 위치로 값을 돌려보내는 작업을 하고 함수를 종료시킴
+#res의 add 값인 10과 20을 계산 후 다시 res 자리로 값을 돌려보냄
+
+#파이썬의 경우 튜플의 패킹(튜플로 값을 묶는 행위)으로 여러값을 넘길 수 있음
+#언패킹으로 튜플로 묶여 있는 값들을 풀어낼 수 있음
+def add(num1, num2):
+    return num1 + num2
+
+comment, res = add(10, 20)
+print(comment, res)
+
+#==========================================
+
+#6. 변수의 범위(지역변수, 전역변수)
+#지역변수의 경우 함수 안에서 만들어지며 함수 내에서만 사용 가능
+
+def totaPrice(price):
+    total = 0
+    for money in price:
+        a = 10
+        total += money
+    
+    print(a)
+
+totaPrice([1, 2, 3, 4, 5])
+#현재 total은 함수 밖으로 나와 사용불가능
+print(total)
+
+#전역변수의 경우 특정 함수에 귀속되지 않았기 때문에 어디서든 사용 가능하나 수정(단계 필요)은 불가능
+number = 1000
+
+def totaPrice(price):
+    total = 0
+    for money in price:
+        total += money
+    #number = total 전역변수이나 지역변수 취급
+
+    #전역변수 수정 시, 해당 단계 필요
+    global number
+    number = total 
+    print(number)
+
+totaPrice([1, 2, 3, 4, 5])
+print(number)
+
 
 
 
